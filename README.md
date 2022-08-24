@@ -2,6 +2,8 @@
 
 Тестирование реализовано на Python3 + Selenium Webdriver с применением паттерна Page Objects Model.
 
+Браузер: Chrome, Firefox
+
 Сторонние библиотеки: pytest, allure-pytest.
 
 
