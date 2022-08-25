@@ -1,8 +1,5 @@
 from .base_page import BasePage
 from .locators import PicturesPageLocators
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 class PicturesPage(BasePage):
     # Открыть вторую картинку
@@ -12,7 +9,6 @@ class PicturesPage(BasePage):
 
     # Проверить, что картинка открылась и вернуть ее src
     def should_be_second_image_on_page(self):
-        full_page = WebDriverWait(self.browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "html")))
         assert self.is_element_present(*PicturesPageLocators.CURRENT_IMAGE), "Image is not presented"
         second_image = self.browser.find_element(*PicturesPageLocators.CURRENT_IMAGE).get_attribute("src")
         return second_image

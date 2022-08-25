@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 class PicturesPageLocators():
     SECOND_IMAGE_LINK = (By.XPATH, "//*[@data-ri='1']/a[@role='button']")
-    CURRENT_IMAGE = (By.XPATH, "//div[@id='Sva75c']/div/div/div[3]/div[not(contains(@aria-hidden,'true'))]//div[@role='region']/a/img")
+    CURRENT_IMAGE = (By.XPATH, "//div[@id='Sva75c']/div/div/div[3]/div[not(contains(@aria-hidden,'true'))]//div[@role='region']/a/img[not(contains(@src,'data:image'))]")
     NEXT_BUTTON = (By.XPATH, "//div[@id='Sva75c']/div/div/div[3]/div[not(contains(@aria-hidden,'true'))]//a[@aria-label='Следующее изображение']")
     PREV_BUTTON = (By.XPATH, "//div[@id='Sva75c']/div/div/div[3]/div[not(contains(@aria-hidden,'true'))]//a[@aria-label='Предыдущее изображение']")
 
